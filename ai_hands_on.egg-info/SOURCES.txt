@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+ai_hands_on.egg-info/PKG-INFO
+ai_hands_on.egg-info/SOURCES.txt
+ai_hands_on.egg-info/dependency_links.txt
+ai_hands_on.egg-info/top_level.txt
