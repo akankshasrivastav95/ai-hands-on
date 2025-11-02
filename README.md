@@ -70,14 +70,49 @@ A multi-agent AI system built with CrewAI framework that demonstrates collaborat
 
 **Location:** `engineering_team/`
 
+---
+
+### 4. Sidekick - Personal AI Co-Worker
+An intelligent AI assistant that autonomously completes tasks using a self-evaluating workflow. Built with LangGraph, it features a worker-evaluator architecture that continuously refines its work until success criteria are met.
+
+**Architecture:**
+- **Worker Agent**: Performs actions using available tools to complete requests
+- **Evaluator Agent**: Assesses the worker's output against specified success criteria
+- **Self-Evaluating Loop**: Iteratively improves work based on feedback until completion
+
+**Features:**
+- Autonomous task execution with self-evaluation
+- Comprehensive toolset including web browsing, search, file management, and Python execution
+- Iterative improvement based on evaluator feedback
+- Interactive web interface with Gradio
+- Success criteria-based task completion
+
+**Available Tools:**
+- Web browsing with Playwright
+- Web search via Google Serper API
+- Wikipedia queries
+- File management (reads/writes to sandbox folder)
+- Python REPL for code execution
+- Push notifications
+
+**Key Benefits:**
+- Self-sustaining work loop until criteria are met
+- Automatically asks for clarification when needed
+- All output files saved to `sandbox/` directory
+- Built with LangGraph for robust workflow orchestration
+
+**Location:** `sidekiq/`
+
 ## 🛠️ Getting Started
 
 Each project has its own setup instructions and requirements. Navigate to the specific project directory for detailed installation and usage instructions.
 
 ### Prerequisites
-- Python 3.10+ (for CrewAI projects)
+- Python 3.12+ (for LangGraph and modern projects)
 - OpenAI API key (for AI agent functionality)
 - Optional: SendGrid API key (for email functionality in Deep Research)
+- Optional: Google Serper API key (for web search in Sidekick)
+- Optional: Pushover credentials (for notifications in Sidekick)
 
 ## 📁 Project Structure
 
@@ -86,6 +121,7 @@ ai-hands-on/
 ├── resume/                 # Resume chatbot project
 ├── deep-research/          # Multi-agent research system
 ├── engineering_team/       # CrewAI trading simulation
+├── sidekiq/                # Sidekick personal AI co-worker
 └── README.md              # This file
 ```
 
